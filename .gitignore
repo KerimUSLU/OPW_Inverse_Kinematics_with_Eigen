@@ -5,11 +5,6 @@
 # Editor config
 .vscode/
 
-# Dependency archives
-eigen-3.4.0.tar.gz
-
-# Eigen source tree (if pulled locally)
-eigen-3.4.0/
 
 # Temporary
 *.o
