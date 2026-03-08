@@ -252,13 +252,6 @@ Each section prints the target pose computed by FK, then all reachable IK soluti
 
 ---
 
-## 🧪 How to extend
-
-- Add more robot models by adding new `opw_robots::` parameter sets in `opw_kinematics.hpp`.
-- For trajectory planning, call `inverse_kinematics()` for each desired pose and select a solution that satisfies joint limits, avoids singularities, or minimizes joint motion.
-
----
-
 ## 📌 Notes for CSE 685
 
 - This implementation is **analytic** (no numerical root finding).
