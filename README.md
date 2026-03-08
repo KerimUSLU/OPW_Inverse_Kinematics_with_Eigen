@@ -6,7 +6,17 @@ This repository is created for **CSE 685 Robot Control Theory** homework and inc
 
 - ✅ **Forward kinematics** (FK) for OPW robots
 - ✅ **Analytical inverse kinematics** (IK) returning up to 8 solutions
-- ✅ Validation by recomputing the FK from each IK solution and reporting position error
+- ✅ **Round-trip validation (FK → IK → FK)** to prove correctness
+
+### 🔍 Round‑trip validation (FK → IK → FK)
+
+For each test case:
+
+1. **Compute FK** from a known joint set `q_in` to get a target pose `(u, R0e)`.
+2. **Solve IK** for that target pose, producing up to 8 candidate joint solutions.
+3. **Recompute FK** for each IK candidate and compare the resulting position to the original target.
+
+The demo prints the position error (`err=... m`) for each candidate, so you can verify that each IK solution correctly reconstructs the intended pose.
 
 ---
 
